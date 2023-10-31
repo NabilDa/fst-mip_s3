@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+/**
+ * Max_Min - calcule le max et le min entre deux entier
+ * @a: le premier entier
+ * @b: le dexieme entier
+ */
+void Max_Min(int a, int b, int *max, int *min)
+{
+	if (a >= b)
+	{
+		*max = a;
+		*min = b;
+	}
+	else
+	{
+		*max = b;
+		*min = a;
+	}
+}
+
+/**
+ * main - test la fonction Max_Min
+ *
+ * Return: Toujours 0.
+ */
+int main(void)
+{
+	int a, b, max, min;
+
+	printf("Veuillez saisir a : ");
+	scanf("%d", &a);
+	printf("Veuillez saisir b : ");
+	scanf("%d", &b);
+
+	Max_Min(a, b, &max, &min);
+
+	printf("le max entre %d et %d est : %d.\n", a, b, max);
+	printf("le min entre %d et %d est : %d.\n", a, b, min);
+
+	return (0);
+}
